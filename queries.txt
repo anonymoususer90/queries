@@ -80,7 +80,6 @@ order by
 """
 ,
 """
-/*+ SeqScan(order_line) */
 -- Q04
 select 
     o_ol_cnt, count(*) as order_count
