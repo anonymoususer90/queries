@@ -38,7 +38,7 @@ from
      where 
          s_suppkey = su_suppkey
          and su_nationkey = n_nationkey
-         and n_name like 'Canada%'   
+         and n_name like 'Cameroon%'   
      group by 
          s_i_id
     ) m
@@ -47,7 +47,7 @@ where
     and s_suppkey = su_suppkey
     and su_nationkey = n_nationkey
     and i_brand like 'Brand#31%'    
-    and n_name like 'Canada%'
+    and n_name like 'Cameroon%'
     and i_id = m_i_id
     and s_quantity = m_s_quantity
 order by 
@@ -93,7 +93,7 @@ where
     and c_w_id = o_w_id
     and c_d_id = o_d_id
     and c_nationkey = n_nationkey
-    and n_name like 'Canada%'
+    and n_name like 'Norway%'
     and exists (
         select 
             *
@@ -127,8 +127,8 @@ where
     and s_suppkey = su_suppkey
     and c_nationkey = cust_nation.n_nationkey
     and su_nationkey = supp_nation.n_nationkey
-    and cust_nation.n_name like 'Canada%'
-    and supp_nation.n_name like 'Canada%' 
+    and cust_nation.n_name like 'Brazil%'
+    and supp_nation.n_name like 'Brazil%' 
     and o_entry_d >= '2015-01-02 00:00:00.000000'
 group by 
     cust_nation.n_name
@@ -205,7 +205,7 @@ where
     and c_d_id = o_d_id
     and n1.n_nationkey = c_nationkey
     and ol_i_id < 1000
-    and n1.n_name like 'Canada%'
+    and n1.n_name like 'Qatar%'
     and su_nationkey = n2.n_nationkey
     and i_brand like 'Brand#21%'
     and s_i_id = ol_i_id
@@ -253,7 +253,7 @@ where
     and ol_o_id = o_id
     and o_entry_d <= ol_delivery_d
     and n_nationkey = c_nationkey
-    and n_name like 'Canada%'
+    and n_name like 'Serbia%'
 group by 
     c_id, c_last, c_city, c_phone, n_name
 order by 
@@ -382,7 +382,7 @@ where
     and ol_d_id = o_d_id
     and ol_o_id = o_id
     and c_nationkey = n_nationkey
-    and n_name like 'Canada%' 
+    and n_name like 'France%' 
 group by 
     o_id, o_w_id, o_d_id, c_id, c_last, o_entry_d, o_ol_cnt
 having 
